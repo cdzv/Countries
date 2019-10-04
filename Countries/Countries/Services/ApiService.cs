@@ -35,10 +35,11 @@ namespace Countries.Services
                     };
                 }
 
-                var countries = JsonConvert.DeserializeObject<Country>(result);
+                var countries = JsonConvert.DeserializeObject(result);
                 return new Response
                 {
                     IsSuccess = true,
+                    Message = "Ok",
                     Result = countries
                 };
             }
