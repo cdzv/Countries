@@ -5,9 +5,11 @@ namespace Countries.Services
 {
     public interface IApiService
     {
-        Task<Response> GetCountries(
+        Task<Response> GetListAsync(
             string urlBase,
             string servicePrefix,
             string controller);
+
+        Task<bool> CheckConnectionAsync(string url);
     }
 }

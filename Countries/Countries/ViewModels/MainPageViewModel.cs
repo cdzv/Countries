@@ -1,14 +1,8 @@
 ﻿using Countries.Models;
 using Countries.Services;
-using Newtonsoft.Json;
-using Prism.Commands;
-using Prism.Mvvm;
 using Prism.Navigation;
-using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
 
 namespace Countries.ViewModels
 {
@@ -37,15 +31,20 @@ namespace Countries.ViewModels
         {
             var url = App.Current.Resources["UrlAPI"].ToString();
 
-            var response = await _apiService.GetCountries(url, "rest", "/v2/all");
+            var connection = await _apiService.CheckConnectionAsync(url);
+            if (!connection)
+            {
+                await App.Current.MainPage.DisplayAlert(
+                    "Error", "Check the internet connection", "Accept");
+            }
+
+            var response = await _apiService.GetListAsync(url, "rest", "/v2/all");
 
             if (!response.IsSuccess)
             {
                 await App.Current.MainPage.DisplayAlert("Error", response.Message, "Accept");
                 return;
             }
-
-            var _countriesList = response.Result;
 
             await App.Current.MainPage.DisplayAlert("OK", response.Result.ToString(), "Accept");
         }

@@ -5,12 +5,13 @@ using System.Text;
 using System.Threading.Tasks;
 using Countries.Models;
 using Newtonsoft.Json;
+using Plugin.Connectivity;
 
 namespace Countries.Services
 {
     public class ApiService : IApiService
     {
-        public async Task<Response> GetCountries(
+        public async Task<Response> GetListAsync(
             string urlBase,
             string servicePrefix,
             string controller)
@@ -51,6 +52,16 @@ namespace Countries.Services
                     Message = ex.Message,
                 };
             }
+        }
+
+        public async Task<bool> CheckConnectionAsync(string url)
+        {
+            if(!CrossConnectivity.Current.IsConnected)
+            {
+                return false;
+            }
+
+            return await CrossConnectivity.Current.IsRemoteReachable(url);
         }
     }
 }
