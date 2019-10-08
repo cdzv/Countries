@@ -46,7 +46,9 @@ namespace Countries.ViewModels
                 return;
             }
 
-            await App.Current.MainPage.DisplayAlert("OK", response.Result.ToString(), "Accept");
+            var _countryList = (List<Country>)response.Result;
+
+            Countries = new ObservableCollection<Country>(_countryList);
         }
 
     }

@@ -36,7 +36,7 @@ namespace Countries.Services
                     };
                 }
 
-                var countries = JsonConvert.DeserializeObject(result);
+                var countries = JsonConvert.DeserializeObject<List<Country>>(result);
                 return new Response
                 {
                     IsSuccess = true,
