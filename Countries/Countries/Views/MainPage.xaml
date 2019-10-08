@@ -3,6 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
              xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             xmlns:ffimageloadingsvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+             xmlns:fftransformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations"
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="Countries.Views.MainPage"
              Title="{Binding Title}">
@@ -24,7 +26,7 @@
                                 <RowDefinition Height="Auto"/>
                                 <RowDefinition Height="Auto"/>
                             </Grid.RowDefinitions>
-                            <ffimageloading:CachedImage
+                            <ffimageloadingsvg:SvgCachedImage
                                 Grid.Column="0"
                                 Source="{Binding Flag}"
                                 LoadingPlaceholder= "LoaderImage"
@@ -33,7 +35,8 @@
                                 RetryCount= "3"
                                 RetryDelay= "600"
                                 DownsampleToViewSize = "true"
-                                WidthRequest="100"/>
+                                HeightRequest="30"
+                                WidthRequest="60"/>
                             <Grid
                                 Grid.Column="1">
                                 <Grid.ColumnDefinitions>
