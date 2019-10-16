@@ -1,11 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Net.Http;
-using System.Text;
-using System.Threading.Tasks;
-using Countries.Models;
+﻿using Countries.Models;
+using Countries.ViewModels;
 using Newtonsoft.Json;
 using Plugin.Connectivity;
+using System;
+using System.Collections.Generic;
+using System.Net.Http;
+using System.Threading.Tasks;
 
 namespace Countries.Services
 {
@@ -36,7 +36,7 @@ namespace Countries.Services
                     };
                 }
 
-                var countries = JsonConvert.DeserializeObject<List<Country>>(result);
+                var countries = JsonConvert.DeserializeObject<List<CountryItemViewModel>>(result);
                 return new Response
                 {
                     IsSuccess = true,
@@ -56,7 +56,7 @@ namespace Countries.Services
 
         public async Task<bool> CheckConnectionAsync(string url)
         {
-            if(!CrossConnectivity.Current.IsConnected)
+            if (!CrossConnectivity.Current.IsConnected)
             {
                 return false;
             }

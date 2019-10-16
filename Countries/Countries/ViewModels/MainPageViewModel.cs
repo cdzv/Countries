@@ -8,20 +8,22 @@ namespace Countries.ViewModels
 {
     public class MainPageViewModel : ViewModelBase
     {
+        //private readonly INavigationService _navigationService;
         private readonly IApiService _apiService;
-        private ObservableCollection<Country> _countries;
+        private ObservableCollection<CountryItemViewModel> _countries;
 
         public MainPageViewModel(
             INavigationService navigationService,
             IApiService apiService) : base(navigationService)
         {
+            //_navigationService = navigationService;
             _apiService = apiService;
             Title = "Main Page";
 
             LoadCountries();
         }
 
-        public ObservableCollection<Country> Countries
+        public ObservableCollection<CountryItemViewModel> Countries
         {
             get => _countries;
             set => SetProperty(ref _countries, value);
@@ -46,10 +48,9 @@ namespace Countries.ViewModels
                 return;
             }
 
-            var _countryList = (List<Country>)response.Result;
+            var _countryList = (List<CountryItemViewModel>)response.Result;
 
-            Countries = new ObservableCollection<Country>(_countryList);
+            Countries = new ObservableCollection<CountryItemViewModel>(_countryList);
         }
-
     }
 }
