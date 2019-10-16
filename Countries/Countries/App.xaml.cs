@@ -33,6 +33,7 @@ namespace Countries
             containerRegistry.RegisterForNavigation<NavigationPage>();
             containerRegistry.RegisterForNavigation<MainPage, MainPageViewModel>();
             containerRegistry.RegisterForNavigation<CountryPage, CountryPageViewModel>();
+            containerRegistry.RegisterForNavigation<CountryTabbedPage, CountryTabbedPageViewModel>();
         }
     }
 }

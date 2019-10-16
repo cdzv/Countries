@@ -1,14 +1,16 @@
-﻿using Countries.Models;
+﻿using Countries.Helpers;
 using Countries.Services;
+using Newtonsoft.Json;
 using Prism.Navigation;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Linq;
 
 namespace Countries.ViewModels
 {
     public class MainPageViewModel : ViewModelBase
     {
-        //private readonly INavigationService _navigationService;
+        private readonly INavigationService _navigationService;
         private readonly IApiService _apiService;
         private ObservableCollection<CountryItemViewModel> _countries;
 
@@ -16,7 +18,7 @@ namespace Countries.ViewModels
             INavigationService navigationService,
             IApiService apiService) : base(navigationService)
         {
-            //_navigationService = navigationService;
+            _navigationService = navigationService;
             _apiService = apiService;
             Title = "Main Page";
 
@@ -50,7 +52,35 @@ namespace Countries.ViewModels
 
             var _countryList = (List<CountryItemViewModel>)response.Result;
 
-            Countries = new ObservableCollection<CountryItemViewModel>(_countryList);
+            Settings.Countries = JsonConvert.SerializeObject(_countryList);
+
+            Countries = new ObservableCollection<CountryItemViewModel>(_countryList.Select(c => new CountryItemViewModel(_navigationService)
+            {
+                Alpha2Code = c.Alpha2Code,
+                Alpha3Code = c.Alpha3Code,
+                AltSpellings = c.AltSpellings,
+                Area = c.Area,
+                Borders = c.Borders,
+                CallingCodes = c.CallingCodes,
+                Capital = c.Capital,
+                Cioc = c.Cioc,
+                Currencies = c.Currencies,
+                Demonym = c.Demonym,
+                Flag = c.Flag,
+                Gini = c.Gini,
+                Languages = c.Languages,
+                Latlng = c.Latlng,
+                Name = c.Name,
+                NativeName = c.NativeName,
+                NumericCode = c.NumericCode,
+                Population = c.Population,
+                Region = c.Region,
+                RegionalBlocs = c.RegionalBlocs,
+                Subregion = c.Subregion,
+                Timezones = c.Timezones,
+                TopLevelDomain = c.TopLevelDomain,
+                Translations = c.Translations
+            }).ToList());
         }
     }
 }
