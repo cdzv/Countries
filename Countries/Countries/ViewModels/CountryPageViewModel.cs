@@ -1,4 +1,6 @@
-﻿using Countries.Models;
+﻿using Countries.Helpers;
+using Countries.Models;
+using Newtonsoft.Json;
 using Prism.Commands;
 using Prism.Mvvm;
 using Prism.Navigation;
@@ -14,7 +16,7 @@ namespace Countries.ViewModels
 
         public CountryPageViewModel(INavigationService navigationService) : base (navigationService)
         {
-            Title = "Country";
+            Title = "Details";
         }
 
         public Country Country
@@ -26,12 +28,7 @@ namespace Countries.ViewModels
         public override void OnNavigatedTo(INavigationParameters parameters)
         {
             base.OnNavigatedTo(parameters);
-
-            if (parameters.ContainsKey("country"))
-            {
-                _country = parameters.GetValue<Country>("country");
-                Title = Country.Name;
-            }
+            Country = JsonConvert.DeserializeObject<Country>(Settings.Country);
         }
     }
 }
