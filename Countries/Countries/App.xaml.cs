@@ -34,6 +34,10 @@ namespace Countries
             containerRegistry.RegisterForNavigation<MainPage, MainPageViewModel>();
             containerRegistry.RegisterForNavigation<CountryPage, CountryPageViewModel>();
             containerRegistry.RegisterForNavigation<CountryTabbedPage, CountryTabbedPageViewModel>();
+            containerRegistry.RegisterForNavigation<CurrenciesPage, CurrenciesPageViewModel>();
+            containerRegistry.RegisterForNavigation<BordersPage, BordersPageViewModel>();
+            containerRegistry.RegisterForNavigation<LanguagesPage, LanguagesPageViewModel>();
+            containerRegistry.RegisterForNavigation<TranslationsPage, TranslationsPageViewModel>();
         }
     }
 }

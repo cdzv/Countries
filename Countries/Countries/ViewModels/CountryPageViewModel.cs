@@ -30,5 +30,6 @@ namespace Countries.ViewModels
             base.OnNavigatedTo(parameters);
             Country = JsonConvert.DeserializeObject<Country>(Settings.Country);
         }
+
     }
 }

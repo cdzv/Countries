@@ -1,4 +1,5 @@
 ﻿using Countries.Helpers;
+using Countries.Models;
 using Countries.Services;
 using Newtonsoft.Json;
 using Prism.Navigation;
@@ -13,6 +14,8 @@ namespace Countries.ViewModels
         private readonly INavigationService _navigationService;
         private readonly IApiService _apiService;
         private ObservableCollection<CountryItemViewModel> _countries;
+
+        private List<CountryItemViewModel> _listCountries;
 
         public MainPageViewModel(
             INavigationService navigationService,
@@ -53,7 +56,6 @@ namespace Countries.ViewModels
             var _countryList = (List<CountryItemViewModel>)response.Result;
 
             Settings.Countries = JsonConvert.SerializeObject(_countryList);
-
             Countries = new ObservableCollection<CountryItemViewModel>(_countryList.Select(c => new CountryItemViewModel(_navigationService)
             {
                 Alpha2Code = c.Alpha2Code,

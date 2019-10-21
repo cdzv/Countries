@@ -9,7 +9,10 @@
 
     <TabbedPage.Children>
         <views:CountryPage/>
-        <views:MapPage/>
+        <views:CurrenciesPage/>
+        <views:BordersPage/>
+        <views:TranslationsPage/>
+        <views:LanguagesPage/>
     </TabbedPage.Children>
   
 </TabbedPage>
