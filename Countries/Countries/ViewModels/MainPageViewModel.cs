@@ -15,8 +15,6 @@ namespace Countries.ViewModels
         private readonly IApiService _apiService;
         private ObservableCollection<CountryItemViewModel> _countries;
 
-        private List<CountryItemViewModel> _listCountries;
-
         public MainPageViewModel(
             INavigationService navigationService,
             IApiService apiService) : base(navigationService)

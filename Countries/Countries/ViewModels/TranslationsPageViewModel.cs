@@ -20,7 +20,6 @@ namespace Countries.ViewModels
         {
             Title = "Translations";
             Country = JsonConvert.DeserializeObject<Country>(Settings.Country);
-            Translations = new ObservableCollection<Translations>(Country.Translations.);
         }
 
         public ObservableCollection<Translations> Translations
