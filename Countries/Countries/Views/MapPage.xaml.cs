@@ -1,4 +1,7 @@
-﻿using Xamarin.Forms;
+﻿using Countries.Helpers;
+using Countries.Models;
+using Newtonsoft.Json;
+using Xamarin.Forms;
 using Xamarin.Forms.Maps;
 
 namespace Countries.Views
@@ -8,10 +11,10 @@ namespace Countries.Views
         public MapPage()
         {
             InitializeComponent();
-
+            var _country = JsonConvert.DeserializeObject<Country>(Settings.Country);
             MapView.MoveToRegion(
                 MapSpan.FromCenterAndRadius(
-                    new Position(37, -122), Distance.FromMiles(1)));
+                    new Position(_country.Latlng[0], _country.Latlng[1]), Distance.FromKilometers(800)));
         }
     }
 }

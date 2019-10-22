@@ -30,7 +30,7 @@ namespace Countries.Models
 
         public List<Language> Languages { get; set; }
 
-        public List<object> Latlng { get; set; }
+        public List<double> Latlng { get; set; }
 
         public string Name { get; set; }
 
