@@ -12,7 +12,7 @@ namespace Countries.Models
 
         public double? Area { get; set; }
 
-        public List<object> Borders { get; set; }
+        public List<string> Borders { get; set; }
 
         public List<string> CallingCodes { get; set; }
 

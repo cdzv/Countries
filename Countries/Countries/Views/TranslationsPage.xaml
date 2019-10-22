@@ -7,65 +7,150 @@
              Title="{Binding Title}">
 
     <StackLayout
-        Padding="10">
-        <ListView
-            HasUnevenRows="True"
-            ItemsSource="{Binding Translations}">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <ViewCell>
-                        <Grid>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="*"/>
-                                <RowDefinition Height="*"/>
-                                <RowDefinition Height="*"/>
-                                <RowDefinition Height="*"/>
-                                <RowDefinition Height="*"/>
-                                <RowDefinition Height="*"/>
-                                <RowDefinition Height="*"/>
-                                <RowDefinition Height="*"/>
-                                <RowDefinition Height="*"/>
-                                <RowDefinition Height="*"/>
-                            </Grid.RowDefinitions>
-                            <Label
-                                    Grid.Row="0"
-                                    FontAttributes="Bold"
-                                    Text="{Binding De}"/>
-                            <Label
-                                    Grid.Row="1"
-                                    Text="{Binding Es}"/>
-                            <Label
-                                    Grid.Row="2"
-                                    Text="{Binding Fr}"/>
-                            <Label
-                                    Grid.Row="3"
-                                    FontAttributes="Bold"
-                                    Text="{Binding Ja}"/>
-                            <Label
-                                    Grid.Row="4"
-                                    Text="{Binding It}"/>
-                            <Label
-                                    Grid.Row="5"
-                                    Text="{Binding Br}"/>
-                            <Label
-                                    Grid.Row="6"
-                                    FontAttributes="Bold"
-                                    Text="{Binding Pt}"/>
-                            <Label
-                                    Grid.Row="7"
-                                    Text="{Binding Nl}"/>
-                            <Label
-                                    Grid.Row="8"
-                                    Text="{Binding Hr}"/>
-                            <Label
-                                    Grid.Row="9"
-                                    FontAttributes="Bold"
-                                    Text="{Binding Fr}"/>
-                        </Grid>
-                    </ViewCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
+            Padding="5">
+        <Label
+                FontAttributes="Bold"
+                FontSize="Large"
+                HorizontalOptions="Center"
+                Text="{Binding Name}"
+                TextColor="Black">
+        </Label>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+            <Label
+                    Grid.Column="0"
+                    Grid.Row="0"
+                    Text="German"
+                    TextColor="Black">
+            </Label>
+            <Label
+                    Grid.Column="1"
+                    Grid.Row="0"
+                    FontAttributes="Bold"
+                    Text="{Binding Translations.De}"
+                    TextColor="Black">
+            </Label>
+            <Label
+                    Grid.Column="0"
+                    Grid.Row="1"
+                    Text="Spanish"
+                    TextColor="Black">
+            </Label>
+            <Label
+                    Grid.Column="1"
+                    Grid.Row="1"
+                    FontAttributes="Bold"
+                    Text="{Binding Translations.Es}"
+                    TextColor="Black">
+            </Label>
+            <Label
+                    Grid.Column="0"
+                    Grid.Row="2"
+                    Text="French"
+                    TextColor="Black">
+            </Label>
+            <Label
+                    Grid.Column="1"
+                    Grid.Row="2"
+                    FontAttributes="Bold"
+                    Text="{Binding Translations.Fr}"
+                    TextColor="Black">
+            </Label>
+            <Label
+                    Grid.Column="0"
+                    Grid.Row="3"
+                    Text="Japanese"
+                    TextColor="Black">
+            </Label>
+            <Label
+                    Grid.Column="1"
+                    Grid.Row="3"
+                    FontAttributes="Bold"
+                    Text="{Binding Translations.Ja}"
+                    TextColor="Black">
+            </Label>
+            <Label
+                    Grid.Column="0"
+                    Grid.Row="4"
+                    Text="Italian"
+                    TextColor="Black">
+            </Label>
+            <Label
+                    Grid.Column="1"
+                    Grid.Row="4"
+                    FontAttributes="Bold"
+                    Text="{Binding Translations.It}"
+                    TextColor="Black">
+            </Label>
+            <Label
+                    Grid.Column="0"
+                    Grid.Row="5"
+                    Text="Brazilian"
+                    TextColor="Black">
+            </Label>
+            <Label
+                    Grid.Column="1"
+                    Grid.Row="5"
+                    FontAttributes="Bold"
+                    Text="{Binding Translations.Br}"
+                    TextColor="Black">
+            </Label>
+            <Label
+                    Grid.Column="0"
+                    Grid.Row="6"
+                    Text="Portuguese"
+                    TextColor="Black">
+            </Label>
+            <Label
+                    Grid.Column="1"
+                    Grid.Row="6"
+                    FontAttributes="Bold"
+                    Text="{Binding Translations.Pt}"
+                    TextColor="Black">
+            </Label>
+            <Label
+                    Grid.Column="0"
+                    Grid.Row="7"
+                    Text="Dutch"
+                    TextColor="Black">
+            </Label>
+            <Label
+                    Grid.Column="1"
+                    Grid.Row="7"
+                    FontAttributes="Bold"
+                    Text="{Binding Translations.Nl}"
+                    TextColor="Black">
+            </Label>
+            <Label
+                    Grid.Column="0"
+                    Grid.Row="8"
+                    Text="Croatian"
+                    TextColor="Black">
+            </Label>
+            <Label
+                    Grid.Column="1"
+                    Grid.Row="8"
+                    FontAttributes="Bold"
+                    Text="{Binding Translations.Hr}"
+                    TextColor="Black">
+            </Label>
+            <Label
+                    Grid.Column="0"
+                    Grid.Row="9"
+                    Text="Persian"
+                    TextColor="Black">
+            </Label>
+            <Label
+                    Grid.Column="1"
+                    Grid.Row="9"
+                    FontAttributes="Bold"
+                    Text="{Binding Translations.Fa}"
+                    TextColor="Black">
+            </Label>
+        </Grid>
     </StackLayout>
 
 </ContentPage>
