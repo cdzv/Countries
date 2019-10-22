@@ -13,6 +13,7 @@
         <views:BordersPage/>
         <views:TranslationsPage/>
         <views:LanguagesPage/>
+        <views:MapPage/>
     </TabbedPage.Children>
   
 </TabbedPage>

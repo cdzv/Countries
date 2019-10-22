@@ -21,7 +21,7 @@ namespace Countries.ViewModels
         {
             _navigationService = navigationService;
             _apiService = apiService;
-            Title = "Main Page";
+            Title = "Countries";
             LoadCountries();
         }
 

@@ -17,14 +17,14 @@
             TextColor="Black">
         </Label>
         <ffimageloadingsvg:SvgCachedImage
-        Source="{Binding Country.Flag}"
-        LoadingPlaceholder= "LoaderImage"
-        ErrorPlaceholder= "ErrorImage"
-        CacheDuration= "50"
-        RetryCount= "3"
-        RetryDelay= "600"
-        DownsampleToViewSize = "true"
-        HeightRequest="300"/>
+            Source="{Binding Country.Flag}"
+            LoadingPlaceholder= "LoaderImage"
+            ErrorPlaceholder= "ErrorImage"
+            CacheDuration= "50"
+            RetryCount= "3"
+            RetryDelay= "600"
+            DownsampleToViewSize = "true"
+            HeightRequest="300"/>
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>

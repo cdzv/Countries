@@ -9,7 +9,7 @@ namespace Countries.ViewModels
 {
     public class MapPageViewModel : ViewModelBase
     {
-        public MapPageViewModel(INavigationService navigationService) : base (navigationService)
+        public MapPageViewModel(INavigationService navigationService) : base(navigationService)
         {
             Title = "Map";
         }

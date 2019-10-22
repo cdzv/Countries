@@ -8,7 +8,13 @@
              Title="{Binding Title}">
 
     <StackLayout>
-        <Label Text="Map"/>
+        <maps:Map 
+            x:Name="MapView" 
+            HorizontalOptions="FillAndExpand" 
+            VerticalOptions="FillAndExpand"
+            MapType="Street"/>
+        
     </StackLayout>
+
 
 </ContentPage>
