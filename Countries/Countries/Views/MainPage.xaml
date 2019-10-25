@@ -7,10 +7,18 @@
              xmlns:fftransformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations"
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="Countries.Views.MainPage"
+             BackgroundColor="{StaticResource colorBackgroud}"
              Title="{Binding Title}">
 
     <StackLayout
         Padding="10">
+        <SearchBar
+            HeightRequest="46"
+            Text="{Binding Filter, Mode=TwoWay}"
+            Placeholder="Search..."
+            PlaceholderColor="{StaticResource colorSecondary}"
+            SearchCommand="{Binding SearchCommand}"
+            TextColor="{StaticResource colorFont}"/>
         <ListView
             HasUnevenRows="True"
             ItemsSource="{Binding Countries}">
@@ -19,7 +27,8 @@
                     <ViewCell>
                         <Frame
                             CornerRadius="10"
-                            Margin="0,0,0,10">
+                            Margin="0,0,0,10"
+                            BackgroundColor="{StaticResource colorAccent}">
                             <Frame.GestureRecognizers>
                                 <TapGestureRecognizer Command="{Binding SelectCountryCommand}"/>
                             </Frame.GestureRecognizers>
@@ -50,14 +59,16 @@
                                         <ColumnDefinition Width="*"/>
                                     </Grid.ColumnDefinitions>
                                     <Label
-                                    Grid.Column="0"
-                                    Grid.Row="0"
-                                    FontAttributes="Bold"
-                                    Text="{Binding Name}"/>
+                                        Grid.Column="0"
+                                        Grid.Row="0"
+                                        FontAttributes="Bold"
+                                        Text="{Binding Name}"
+                                        TextColor="{StaticResource colorFont}"/>
                                     <Label
-                                    Grid.Column="0"
-                                    Grid.Row="1"
-                                    Text="{Binding Capital}"/>
+                                        Grid.Column="0"
+                                        Grid.Row="1"
+                                        Text="{Binding Capital}"
+                                        TextColor="{StaticResource colorSecondary}"/>
                                 </Grid>
                             </Grid>
                         </Frame>
@@ -66,5 +77,4 @@
             </ListView.ItemTemplate>
         </ListView>
     </StackLayout>
-
 </ContentPage>

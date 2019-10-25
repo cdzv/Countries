@@ -5,7 +5,8 @@
              xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="Countries.Views.MapPage"
-             Title="{Binding Title}">
+             BackgroundColor="{StaticResource colorBackgroud}"
+             IconImageSource="ic_pin_drop.png">
 
     <StackLayout>
         <maps:Map 
@@ -13,8 +14,6 @@
             HorizontalOptions="FillAndExpand" 
             VerticalOptions="FillAndExpand"
             MapType="Street"/>
-        
     </StackLayout>
-
 
 </ContentPage>

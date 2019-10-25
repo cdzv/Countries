@@ -4,13 +4,15 @@
              xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="Countries.Views.LanguagesPage"
-             Title="{Binding Title}">
+             BackgroundColor="{StaticResource colorBackgroud}"
+             IconImageSource="ic_record_voice_over.png">
 
     <StackLayout
         Padding="10">
         <ListView
             HasUnevenRows="True"
-            ItemsSource="{Binding Languages}">
+            ItemsSource="{Binding Languages}"
+            Margin="10,10">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
@@ -22,23 +24,33 @@
                                 <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
                             <Label
-                                    Grid.Column="0"
-                                    FontAttributes="Bold"
-                                    Text="{Binding Iso639_1}"/>
+                                Grid.Column="0"
+                                FontAttributes="Bold"
+                                Padding="10,10"
+                                Text="{Binding Iso639_1}"
+                                TextColor="{StaticResource colorFont}"/>
                             <Label
-                                    Grid.Column="1"
-                                    Text="{Binding Iso639_2}"/>
+                                Grid.Column="1"
+                                Padding="10,10"
+                                Text="{Binding Iso639_2}"
+                                TextColor="{StaticResource colorFont}"/>
                             <Label
-                                    Grid.Column="2"
-                                    Text="{Binding Name}"/>
+                                Grid.Column="2"
+                                Text="{Binding Name}"
+                                Padding="10,10"
+                                TextColor="{StaticResource colorFont}"/>
                             <Label
-                                    Grid.Column="3"
-                                    Text="{Binding NativeName}"/>
+                                Grid.Column="3"
+                                Padding="10,10"
+                                TextColor="{StaticResource colorFont}"/>
+                            <Label
+                                Grid.Column="3"
+                                Text="{Binding NativeName}"
+                                TextColor="{StaticResource colorFont}"/>
                         </Grid>
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-    </StackLayout>
-
+        </StackLayout>
 </ContentPage>

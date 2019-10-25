@@ -5,6 +5,7 @@
             xmlns:views="clr-namespace:Countries.Views"
             prism:ViewModelLocator.AutowireViewModel="True"
             x:Class="Countries.Views.CountryTabbedPage"
+             BackgroundColor="{StaticResource colorBackgroud}"
             Title="{Binding Title}">
 
     <TabbedPage.Children>
@@ -15,5 +16,5 @@
         <views:LanguagesPage/>
         <views:MapPage/>
     </TabbedPage.Children>
-  
+
 </TabbedPage>

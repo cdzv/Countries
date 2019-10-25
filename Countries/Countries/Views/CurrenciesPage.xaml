@@ -4,13 +4,15 @@
              xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="Countries.Views.CurrenciesPage"
-             Title="{Binding Title}">
+             BackgroundColor="{StaticResource colorBackgroud}"
+             IconImageSource="ic_money.png">
 
     <StackLayout
         Padding="10">
         <ListView
             HasUnevenRows="True"
-            ItemsSource="{Binding Currencies}">
+            ItemsSource="{Binding Currencies}"
+            Margin="10,10">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
@@ -20,16 +22,19 @@
                                 <ColumnDefinition Width="*"/>
                                 <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
-                                <Label
+                            <Label
                                     Grid.Column="0"
                                     FontAttributes="Bold"
-                                    Text="{Binding Code}"/>
+                                    Text="{Binding Code}"
+                                    TextColor="{StaticResource colorFont}"/>
                             <Label
                                     Grid.Column="1"
-                                    Text="{Binding Name}"/>
+                                    Text="{Binding Name}"
+                                    TextColor="{StaticResource colorFont}"/>
                             <Label
                                     Grid.Column="2"
-                                    Text="{Binding Symbol}"/>
+                                    Text="{Binding Symbol}"
+                                    TextColor="{StaticResource colorFont}"/>
                         </Grid>
                     </ViewCell>
                 </DataTemplate>

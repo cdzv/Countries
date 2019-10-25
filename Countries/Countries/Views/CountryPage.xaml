@@ -39,8 +39,7 @@
                     Grid.Row="0"
                     Padding="10,10"
                     Text=" Capital"
-                    TextColor="{StaticResource colorFont}">
-                </Label>
+                    TextColor="{StaticResource colorFont}"/>
                 <Label
                     Grid.Column="1"
                     Grid.Row="0"
@@ -50,171 +49,165 @@
                     TextColor="{StaticResource colorFont}">
                 </Label>
                 <Label
-                        Grid.Column="0"
-                        Grid.Row="1"
-                        Padding="10,10"
-                        Text="Population"
+                    Grid.Column="0"
+                    Grid.Row="1"
+                    Padding="10,10"
+                    Text="Population"
                     TextColor="{StaticResource colorFont}">
                 </Label>
                 <Label
-                        Grid.Column="1"
-                        Grid.Row="1"
-                        FontAttributes="Bold"
-                        Padding="10,10"
-                        Text="{Binding Country.Population, StringFormat='{0:N0}'}"
+                    Grid.Column="1"
+                    Grid.Row="1"
+                    FontAttributes="Bold"
+                    Padding="10,10"
+                    Text="{Binding Country.Population, StringFormat='{0:N0}'}"
                     TextColor="{StaticResource colorFont}">
                 </Label>
                 <Label
-                        Grid.Column="0"
-                        Grid.Row="2"
-                        Padding="10,10"
-                        Text="Area"
+                    Grid.Column="0"
+                    Grid.Row="2"
+                    Padding="10,10"
+                    Text="Area"
                     TextColor="{StaticResource colorFont}"/>
                 <Label
-                        Grid.Column="1"
-                        Grid.Row="2"
-                        FontAttributes="Bold"
-                        Padding="10,10"
-                        Text="{Binding Country.Area, StringFormat='{0:N0}'}"
-                    TextColor="{StaticResource colorFont}"/>
-
-                <Label
-                        Grid.Column="0"
-                        Grid.Row="3"
-                        Padding="10,10"
-                        Text="Alpha Code-2"
+                    Grid.Column="1"
+                    Grid.Row="2"
+                    FontAttributes="Bold"
+                    Padding="10,10"
+                    Text="{Binding Country.Area, StringFormat='{0:N0}'}"
                     TextColor="{StaticResource colorFont}"/>
 
                 <Label
-                        Grid.Column="1"
-                        Grid.Row="3"
-                        FontAttributes="Bold"
-                        Padding="10,10"
-                        Text="{Binding Country.Alpha2Code}"
-                    TextColor="{StaticResource colorFont}">
-                </Label>
-                <Label
-                        Grid.Column="0"
-                        Grid.Row="4"
-                        Padding="10,10"
-                        Text="Alpha Code-3"
-                    TextColor="{StaticResource colorFont}">
-                </Label>
-                <Label
-                        Grid.Column="1"
-                        Grid.Row="4"
-                        Padding="10,10"
-                        FontAttributes="Bold"
-                        Text="{Binding Country.Alpha3Code}"
-                    TextColor="{StaticResource colorFont}">
-                </Label>
-                <Label
-                        Grid.Column="0"
-                        Grid.Row="5"
-                        Padding="10,10"
-                        Text="Region"
+                    Grid.Column="0"
+                    Grid.Row="3"
+                    Padding="10,10"
+                    Text="Alpha Code-2"
                     TextColor="{StaticResource colorFont}"/>
 
                 <Label
-                        Grid.Column="1"
-                        Grid.Row="5"
-                        FontAttributes="Bold"
-                        Padding="10,10"
-                        Text="{Binding Country.Region}"
+                    Grid.Column="1"
+                    Grid.Row="3"
+                    FontAttributes="Bold"
+                    Padding="10,10"
+                    Text="{Binding Country.Alpha2Code}"
                     TextColor="{StaticResource colorFont}">
                 </Label>
                 <Label
-                        Grid.Column="0"
-                        Grid.Row="6"
-                        Padding="10,10"
-                        Text="Subregion"
+                    Grid.Column="0"
+                    Grid.Row="4"
+                    Padding="10,10"
+                    Text="Alpha Code-3"
                     TextColor="{StaticResource colorFont}">
                 </Label>
                 <Label
-                        Grid.Column="1"
-                        Grid.Row="6"
-                        FontAttributes="Bold"
-                        Padding="10,10"
-                        Text="{Binding Country.Subregion}"
+                    Grid.Column="1"
+                    Grid.Row="4"
+                    Padding="10,10"
+                    FontAttributes="Bold"
+                    Text="{Binding Country.Alpha3Code}"
+                    TextColor="{StaticResource colorFont}">
+                </Label>
+                <Label
+                    Grid.Column="0"
+                    Grid.Row="5"
+                    Padding="10,10"
+                    Text="Region"
                     TextColor="{StaticResource colorFont}"/>
 
                 <Label
-                        Grid.Column="0"
-                        Grid.Row="7"
-                        Text="Demonym"
-                        TextColor="Black">
-                </Label>
-                <Label
-                        Grid.Column="1"
-                        Grid.Row="7"
-                        FontAttributes="Bold"
-                        Padding="10,10"
-                        Text="{Binding Country.Demonym}"
+                    Grid.Column="1"
+                    Grid.Row="5"
+                    FontAttributes="Bold"
+                    Padding="10,10"
+                    Text="{Binding Country.Region}"
                     TextColor="{StaticResource colorFont}"/>
-
                 <Label
-                        Grid.Column="0"
-                        Grid.Row="8"
-                        Text="GINI"
-                        Padding="10,10"
+                    Grid.Column="0"
+                    Grid.Row="6"
+                    Padding="10,10"
+                    Text="Subregion"
                     TextColor="{StaticResource colorFont}">
                 </Label>
                 <Label
-                        Grid.Column="1"
-                        Grid.Row="8"
-                        FontAttributes="Bold"
-                        Padding="10,10"
-                        Text="{Binding Country.Gini, StringFormat='{0:N2}'}"
-                        TextColor="{StaticResource colorFont}">
+                    Grid.Column="1"
+                    Grid.Row="6"
+                    FontAttributes="Bold"
+                    Padding="10,10"
+                    Text="{Binding Country.Subregion}"
+                    TextColor="{StaticResource colorFont}"/>
+                <Label
+                    Grid.Column="0"
+                    Grid.Row="7"
+                    Text="Demonym"
+                    Padding="10,10"
+                    TextColor="{StaticResource colorFont}"/>
+                <Label
+                    Grid.Column="1"
+                    Grid.Row="7"
+                    FontAttributes="Bold"
+                    Padding="10,10"
+                    Text="{Binding Country.Demonym}"
+                    TextColor="{StaticResource colorFont}"/>
+                <Label
+                    Grid.Column="0"
+                    Grid.Row="8"
+                    Text="GINI"
+                    Padding="10,10"
+                    TextColor="{StaticResource colorFont}"/>
+                <Label
+                    Grid.Column="1"
+                    Grid.Row="8"
+                    FontAttributes="Bold"
+                    Padding="10,10"
+                    Text="{Binding Country.Gini, StringFormat='{0:N2}'}"
+                    TextColor="{StaticResource colorFont}"/>
+                <Label
+                    Grid.Column="0"
+                    Grid.Row="9"
+                    Padding="10,10"
+                    Text="NativeName"
+                    TextColor="{StaticResource colorFont}"/>
+                <Label
+                    Grid.Column="1"
+                    Grid.Row="9"
+                    FontAttributes="Bold"
+                    Padding="10,10"
+                    Text="{Binding Country.NativeName}"
+                    TextColor="{StaticResource colorFont}">
                 </Label>
                 <Label
-                        Grid.Column="0"
-                        Grid.Row="9"
-                        Padding="10,10"
-                        Text="NativeName"
-                        TextColor="{StaticResource colorFont}">
+                    Grid.Column="0"
+                    Grid.Row="10"
+                    Text="Numeric Code"
+                    Padding="10,10"
+                    TextColor="{StaticResource colorFont}">
                 </Label>
                 <Label
-                        Grid.Column="1"
-                        Grid.Row="9"
-                        FontAttributes="Bold"
-                        Padding="10,10"
-                        Text="{Binding Country.NativeName}"
-                        TextColor="{StaticResource colorFont}">
+                    Grid.Column="1"
+                    Grid.Row="10"
+                    FontAttributes="Bold"
+                    Padding="10,10"
+                    Text="{Binding Country.NumericCode}"
+                    TextColor="{StaticResource colorFont}">
                 </Label>
                 <Label
-                        Grid.Column="0"
-                        Grid.Row="10"
-                        Text="Numeric Code"
-                        Padding="10,10"
-                        TextColor="{StaticResource colorFont}">
+                    Grid.Column="0"
+                    Grid.Row="11"
+                    Padding="10,10"
+                    Text="CIOC"
+                    TextColor="{StaticResource colorFont}">
                 </Label>
                 <Label
-                        Grid.Column="1"
-                        Grid.Row="10"
-                        FontAttributes="Bold"
-                        Padding="10,10"
-                        Text="{Binding Country.NumericCode}"
-                        TextColor="{StaticResource colorFont}">
-                </Label>
-                <Label
-                        Grid.Column="0"
-                        Grid.Row="11"
-                        Padding="10,10"
-                        Text="CIOC"
-                        TextColor="{StaticResource colorFont}">
-                </Label>
-                <Label
-                        Grid.Column="1"
-                        Grid.Row="11"
-                        FontAttributes="Bold"
-                        Padding="10,10"
-                        Text="{Binding Country.Cioc}"
-                        TextColor="{StaticResource colorFont}">
+                    Grid.Column="1"
+                    Grid.Row="11"
+                    FontAttributes="Bold"
+                    Padding="10,10"
+                    Text="{Binding Country.Cioc}"
+                    TextColor="{StaticResource colorFont}">
                 </Label>
             </Grid>
         </StackLayout>
 
     </ScrollView>
-    
+
 </ContentPage>
