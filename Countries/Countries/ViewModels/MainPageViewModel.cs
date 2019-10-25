@@ -1,5 +1,4 @@
 ﻿using Countries.Helpers;
-using Countries.Models;
 using Countries.Services;
 using GalaSoft.MvvmLight.Command;
 using Newtonsoft.Json;
@@ -25,7 +24,7 @@ namespace Countries.ViewModels
         {
             _navigationService = navigationService;
             _apiService = apiService;
-            Title = "Countries";
+            Title = Languages.ApplicationName;
             LoadCountries();
         }
 
@@ -53,7 +52,9 @@ namespace Countries.ViewModels
             if (!connection)
             {
                 await App.Current.MainPage.DisplayAlert(
-                    "Error", "Check the internet connection", "Accept");
+                    Languages.Error,
+                    Languages.ValidationInternet,
+                    Languages.Accept);
                 return;
             }
 
