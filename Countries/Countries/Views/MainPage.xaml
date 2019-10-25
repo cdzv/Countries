@@ -2,9 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
-             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
              xmlns:ffimageloadingsvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
-             xmlns:fftransformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations"
+             xmlns:transl="clr-namespace:Countries.Helpers"
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="Countries.Views.MainPage"
              BackgroundColor="{StaticResource colorBackgroud}"
@@ -15,7 +14,7 @@
         <SearchBar
             HeightRequest="46"
             Text="{Binding Filter, Mode=TwoWay}"
-            Placeholder="Search..."
+            Placeholder="{transl:Translate Search}"
             PlaceholderColor="{StaticResource colorSecondary}"
             SearchCommand="{Binding SearchCommand}"
             TextColor="{StaticResource colorFont}"/>

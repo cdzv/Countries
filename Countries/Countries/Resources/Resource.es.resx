@@ -120,11 +120,59 @@
   <data name="Accept" xml:space="preserve">
     <value>Aceptar</value>
   </data>
+  <data name="AlphaCode2" xml:space="preserve">
+    <value>Código 2-Alfa</value>
+  </data>
+  <data name="AlphaCode3" xml:space="preserve">
+    <value>Código 3-Alfa</value>
+  </data>
   <data name="ApplicationName" xml:space="preserve">
     <value>Países</value>
   </data>
+  <data name="Area" xml:space="preserve">
+    <value>Área</value>
+  </data>
+  <data name="Capital" xml:space="preserve">
+    <value>Capital</value>
+  </data>
+  <data name="Cioc" xml:space="preserve">
+    <value>CIOC</value>
+  </data>
+  <data name="Code" xml:space="preserve">
+    <value>Código</value>
+  </data>
+  <data name="Demonym" xml:space="preserve">
+    <value>Gentilicio</value>
+  </data>
   <data name="Error" xml:space="preserve">
     <value>Error</value>
+  </data>
+  <data name="Gini" xml:space="preserve">
+    <value>GINI</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Nombre</value>
+  </data>
+  <data name="NativeName" xml:space="preserve">
+    <value>Nombre Nativo</value>
+  </data>
+  <data name="NumericCode" xml:space="preserve">
+    <value>Código numérico </value>
+  </data>
+  <data name="Population" xml:space="preserve">
+    <value>Población</value>
+  </data>
+  <data name="Region" xml:space="preserve">
+    <value>Región</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Buscar</value>
+  </data>
+  <data name="Subregion" xml:space="preserve">
+    <value>Sub región</value>
+  </data>
+  <data name="Symbol" xml:space="preserve">
+    <value>Símbolo</value>
   </data>
   <data name="ValidationInternet" xml:space="preserve">
     <value>Comprueba la conexión a internet</value>

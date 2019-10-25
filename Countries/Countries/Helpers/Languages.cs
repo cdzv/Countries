@@ -15,7 +15,12 @@ namespace Countries.Helpers
 
         public static string Accept
         {
-            get => Resource.Accept; 
+            get => Resource.Accept;
+        }
+
+        public static string ApplicationName
+        {
+            get => Resource.ApplicationName;
         }
 
         public static string Error
@@ -28,9 +33,69 @@ namespace Countries.Helpers
             get => Resource.ValidationInternet;
         }
 
-        public static string ApplicationName
+        public static string Search
         {
-            get => Resource.ApplicationName;
+            get => Resource.Search;
+        }
+
+        public static string Capital
+        {
+            get => Resource.Capital;
+        }
+
+        public static string Cioc
+        {
+            get => Resource.Cioc;
+        }
+
+        public static string Code
+        {
+            get => Resource.Code;
+        }
+
+        public static string Demonym
+        {
+            get => Resource.Demonym;
+        }
+
+        public static string Gini
+        {
+            get => Resource.Gini;
+        }
+
+        public static string Name
+        {
+            get => Resource.Name;
+        }
+
+        public static string NativeName
+        {
+            get => Resource.NativeName;
+        }
+
+        public static string NumericCode
+        {
+            get => Resource.NumericCode;
+        }
+
+        public static string Population
+        {
+            get => Resource.Population;
+        }
+
+        public static string Region
+        {
+            get => Resource.Region;
+        }
+
+        public static string Subregion
+        {
+            get => Resource.Subregion;
+        }
+
+        public static string Symbol
+        {
+            get => Resource.Symbol;
         }
     }
 }

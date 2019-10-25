@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
              xmlns:ffimageloadingsvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+             xmlns:transl="clr-namespace:Countries.Helpers"
              prism:ViewModelLocator.AutowireViewModel="True"
              BackgroundColor="{StaticResource colorBackgroud}"
              IconImageSource="ic_info.png"
@@ -38,7 +39,7 @@
                     Grid.Column="0"
                     Grid.Row="0"
                     Padding="10,10"
-                    Text=" Capital"
+                    Text="{transl:Translate Capital}"
                     TextColor="{StaticResource colorFont}"/>
                 <Label
                     Grid.Column="1"
@@ -52,7 +53,7 @@
                     Grid.Column="0"
                     Grid.Row="1"
                     Padding="10,10"
-                    Text="Population"
+                    Text="{transl:Translate Population}"
                     TextColor="{StaticResource colorFont}">
                 </Label>
                 <Label
@@ -67,7 +68,7 @@
                     Grid.Column="0"
                     Grid.Row="2"
                     Padding="10,10"
-                    Text="Area"
+                    Text="{transl:Translate Area}"
                     TextColor="{StaticResource colorFont}"/>
                 <Label
                     Grid.Column="1"
@@ -81,7 +82,7 @@
                     Grid.Column="0"
                     Grid.Row="3"
                     Padding="10,10"
-                    Text="Alpha Code-2"
+                    Text="{transl:Translate AlphaCode2}"
                     TextColor="{StaticResource colorFont}"/>
 
                 <Label
@@ -96,7 +97,7 @@
                     Grid.Column="0"
                     Grid.Row="4"
                     Padding="10,10"
-                    Text="Alpha Code-3"
+                    Text="{transl:Translate AlphaCode3}"
                     TextColor="{StaticResource colorFont}">
                 </Label>
                 <Label
@@ -111,7 +112,7 @@
                     Grid.Column="0"
                     Grid.Row="5"
                     Padding="10,10"
-                    Text="Region"
+                    Text="{transl:Translate Region}"
                     TextColor="{StaticResource colorFont}"/>
 
                 <Label
@@ -125,7 +126,7 @@
                     Grid.Column="0"
                     Grid.Row="6"
                     Padding="10,10"
-                    Text="Subregion"
+                    Text="{transl:Translate Subregion}"
                     TextColor="{StaticResource colorFont}">
                 </Label>
                 <Label
@@ -138,7 +139,7 @@
                 <Label
                     Grid.Column="0"
                     Grid.Row="7"
-                    Text="Demonym"
+                    Text="{transl:Translate Demonym}"
                     Padding="10,10"
                     TextColor="{StaticResource colorFont}"/>
                 <Label
@@ -151,7 +152,7 @@
                 <Label
                     Grid.Column="0"
                     Grid.Row="8"
-                    Text="GINI"
+                    Text="{transl:Translate Gini}"
                     Padding="10,10"
                     TextColor="{StaticResource colorFont}"/>
                 <Label
@@ -165,7 +166,7 @@
                     Grid.Column="0"
                     Grid.Row="9"
                     Padding="10,10"
-                    Text="NativeName"
+                    Text="{transl:Translate NativeName}"
                     TextColor="{StaticResource colorFont}"/>
                 <Label
                     Grid.Column="1"
@@ -178,7 +179,7 @@
                 <Label
                     Grid.Column="0"
                     Grid.Row="10"
-                    Text="Numeric Code"
+                    Text="{transl:Translate NumericCode}"
                     Padding="10,10"
                     TextColor="{StaticResource colorFont}">
                 </Label>
@@ -194,7 +195,7 @@
                     Grid.Column="0"
                     Grid.Row="11"
                     Padding="10,10"
-                    Text="CIOC"
+                    Text="{transl:Translate Cioc}"
                     TextColor="{StaticResource colorFont}">
                 </Label>
                 <Label
