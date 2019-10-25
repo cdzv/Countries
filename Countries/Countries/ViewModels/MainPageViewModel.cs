@@ -14,6 +14,7 @@ namespace Countries.ViewModels
         private readonly INavigationService _navigationService;
         private readonly IApiService _apiService;
         private ObservableCollection<CountryItemViewModel> _countries;
+        private List<CountryItemViewModel> _countriesList;
 
         public MainPageViewModel(
             INavigationService navigationService,
@@ -40,6 +41,7 @@ namespace Countries.ViewModels
             {
                 await App.Current.MainPage.DisplayAlert(
                     "Error", "Check the internet connection", "Accept");
+                return;
             }
 
             var response = await _apiService.GetListAsync(url, "rest", "/v2/all");
@@ -49,11 +51,15 @@ namespace Countries.ViewModels
                 await App.Current.MainPage.DisplayAlert("Error", response.Message, "Accept");
                 return;
             }
+            
+            _countriesList = (List<CountryItemViewModel>)response.Result;
+            Settings.Countries = JsonConvert.SerializeObject(_countriesList);
+            Countries = new ObservableCollection<CountryItemViewModel>(ListingCountries().ToList());
+        }
 
-            var _countryList = (List<CountryItemViewModel>)response.Result;
-
-            Settings.Countries = JsonConvert.SerializeObject(_countryList);
-            Countries = new ObservableCollection<CountryItemViewModel>(_countryList.Select(c => new CountryItemViewModel(_navigationService)
+        private IEnumerable<CountryItemViewModel> ListingCountries()
+        {
+            return _countriesList.Select(c => new CountryItemViewModel(_navigationService)
             {
                 Alpha2Code = c.Alpha2Code,
                 Alpha3Code = c.Alpha3Code,
@@ -79,7 +85,7 @@ namespace Countries.ViewModels
                 Timezones = c.Timezones,
                 TopLevelDomain = c.TopLevelDomain,
                 Translations = c.Translations
-            }).ToList());
+            });
         }
     }
 }
