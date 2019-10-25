@@ -1,11 +1,13 @@
 ﻿using Countries.Helpers;
 using Countries.Models;
 using Countries.Services;
+using GalaSoft.MvvmLight.Command;
 using Newtonsoft.Json;
 using Prism.Navigation;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Windows.Input;
 
 namespace Countries.ViewModels
 {
@@ -15,6 +17,7 @@ namespace Countries.ViewModels
         private readonly IApiService _apiService;
         private ObservableCollection<CountryItemViewModel> _countries;
         private List<CountryItemViewModel> _countriesList;
+        private string _filter;
 
         public MainPageViewModel(
             INavigationService navigationService,
@@ -30,6 +33,16 @@ namespace Countries.ViewModels
         {
             get => _countries;
             set => SetProperty(ref _countries, value);
+        }
+
+        public string Filter
+        {
+            get => _filter;
+            set
+            {
+                SetProperty(ref _filter, value);
+                Search();
+            }
         }
 
         public async void LoadCountries()
@@ -86,6 +99,23 @@ namespace Countries.ViewModels
                 TopLevelDomain = c.TopLevelDomain,
                 Translations = c.Translations
             });
+        }
+
+        private void Search()
+        {
+            if (string.IsNullOrEmpty(Filter))
+            {
+                Countries = new ObservableCollection<CountryItemViewModel>(ListingCountries());
+            }
+            else
+            {
+                Countries = new ObservableCollection<CountryItemViewModel>(ListingCountries().Where(c => c.Name.ToLower().Contains(Filter.ToLower())));
+            }
+        }
+
+        public ICommand SearchCommand
+        {
+            get => new RelayCommand(Search);
         }
     }
 }
