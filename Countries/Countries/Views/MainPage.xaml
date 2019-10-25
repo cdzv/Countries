@@ -13,11 +13,12 @@
         Padding="10">
         <SearchBar
             HeightRequest="46"
+            BackgroundColor="{StaticResource colorSecondary}"
             Text="{Binding Filter, Mode=TwoWay}"
             Placeholder="{transl:Translate Search}"
-            PlaceholderColor="{StaticResource colorSecondary}"
+            PlaceholderColor="{StaticResource colorAccent}"
             SearchCommand="{Binding SearchCommand}"
-            TextColor="{StaticResource colorFont}"/>
+            TextColor="{StaticResource colorFontInverse}"/>
         <ListView
             HasUnevenRows="True"
             ItemsSource="{Binding Countries}">
